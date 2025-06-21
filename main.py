@@ -13,7 +13,7 @@ from langchain_core.messages import HumanMessage
 from graph import app as analysis_graph
 from db_manager import setup_database, save_session, load_session, check_and_register_user
 from sanitize import sanitize_for_telegram
-from logger_config import user_logger # <-- IMPORT THE NEW LOGGER
+from logs.logger_config import user_logger # <-- IMPORT THE NEW LOGGER
 
 # Run the database setup once on startup
 setup_database()
