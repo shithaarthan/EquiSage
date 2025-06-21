@@ -1,0 +1,14 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated directories
+charts/
+reports/
+logs/
+
+# Database file
+sessions.db

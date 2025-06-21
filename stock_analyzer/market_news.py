@@ -8,22 +8,22 @@ import pprint
 # These are the broad topics we'll search for. This list is the "secret sauce"
 # and can be refined over time to improve relevance for the Indian market.
 MACRO_SEARCH_TOPICS = [
-    "RBI monetary policy",
-    "India inflation rate",
-    "India GDP growth",
-    "SEBI regulations",
-    "Indian Union Budget",
-    "Global crude oil prices",
-    "USD INR exchange rate",
-    "Geopolitical tensions Asia",
-    "India trade deficit",
-    "FII DII investment trends India" # Foreign/Domestic Institutional Investor flows
+    "RBI interest rate decision",
+    "India inflation CPI data",
+    "India GDP growth forecast",
+    "SEBI new regulations",
+    "FII DII net investment India",
+    "War tension increases"
+    # Specific topics for current geopolitical context
+    "Crude oil prices Middle East tension", # More targeted than "global"
+    "OPEC+ production cuts",
+    "USD INR exchange rate forecast" # Foreign/Domestic Institutional Investor flows
 ]
 
 # We want only the most impactful, recent news for each topic.
 ARTICLES_PER_TOPIC = 1
 NEWS_TIME_WINDOW = "7d"  # 7-day window for macro news is usually sufficient
-MAX_TOTAL_ARTICLES = 5   # A hard cap to keep the context for the LLM concise
+MAX_TOTAL_ARTICLES = 9   # A hard cap to keep the context for the LLM concise
 
 def fetch_market_context_news(state: Dict[str, Any]) -> Dict[str, List[Dict[str, str]]]:
     """
